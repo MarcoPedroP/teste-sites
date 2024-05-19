@@ -1,72 +1,125 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-  }
-  
-  header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .menu-item {
-    margin-bottom: 30px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu-item h3 {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .menu-item ul {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .menu-item ul li {
-    list-style-type: none;
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-  }
-  
-  .menu-item .food-item {
-    background-color: #f8f8f8;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px;
+}
+/* Estilos da barra lateral */
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: #ccc; /* Cor cinza padrão */
+  transition: width 0.3s; /* Transição suave para a mudança de largura */
+  overflow: hidden; /* Oculta o conteúdo que ultrapassar a largura da barra lateral */
+  z-index: 1; /* Garante que a barra lateral esteja acima do conteúdo principal */
+}
+
+.sidebar:hover {
+  width: 200px; /* Expande a barra lateral quando o mouse estiver sobre ela */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove as margens padrão das listas */
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: none; /* Oculta os links por padrão */
+}
+
+.sidebar:hover ul li a {
+  display: block; /* Mostra os links quando a barra lateral é expandida */
+}
+
+.sidebar ul li a:hover {
+  color: #000;
+}
+
+/* Estilos da seção principal */
+main {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* Estilos dos produtos */
+.product-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: 45%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin: 5px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product .price {
+  font-weight: bold;
+}
+
+.product button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #555;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
